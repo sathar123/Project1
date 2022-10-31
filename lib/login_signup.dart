@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Login.dart';
-import 'package:myapp/Signup.dart';
+import 'package:myapp/login_with_form.dart';
+import 'package:myapp/signup_form.dart';
 
 
 class Login_signup extends StatelessWidget {
@@ -22,7 +22,7 @@ class Login_signup extends StatelessWidget {
               child: Text(
                 "Automatic identity verification which enable you to verify your identity",textAlign: TextAlign.center,style: TextStyle(color: Colors.grey),),
             ),
-            Image(image: AssetImage("assets/images/study.png"),
+            Image(image: AssetImage("assets/images/car.png"),
 
             ),
             Padding(
@@ -40,13 +40,13 @@ class Login_signup extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Login_Form()));
                   }, child: Text("Login",style: TextStyle(color: Colors.white),)),
             ),
             SizedBox(height: 30,),
             ElevatedButton(
                 style: ButtonStyle(
-
+                    backgroundColor: MaterialStateProperty.all(Colors.pink),
                     minimumSize: MaterialStateProperty.all(Size(330, 50)),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
@@ -56,8 +56,8 @@ class Login_signup extends StatelessWidget {
                     )
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
-                }, child: Text("Sign Up",style: TextStyle(color: Colors.black),)),
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup_Form()));
+                }, child: Text("Sign Up",style: TextStyle(color: Colors.white),)),
           ],
         ),
       ),

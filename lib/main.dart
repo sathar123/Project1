@@ -1,11 +1,15 @@
 
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
 
 import 'Splash.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(
+    MyApp(), // Wrap your app
+
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +18,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.pink),
+
+       theme: ThemeData(primarySwatch: Colors.deepPurple),
+      // darkTheme: ThemeData.dark(),
       home: Splash(),
     );
   }
